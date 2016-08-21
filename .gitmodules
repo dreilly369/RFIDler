@@ -1,0 +1,3 @@
+[submodule "RFIDlerAddOns"]
+	path = RFIDlerAddOns
+	url = https://github.com/dreilly369/RFIDlerAddOns
