@@ -131,7 +131,7 @@
 */
 
 // Author: Adam Laurie <adam@aperturelabs.com>
-
+// Edited: Daniel Reilly
 """
 
 import serial
