@@ -131,7 +131,7 @@
 */
 
 // Author: Adam Laurie <adam@aperturelabs.com>
-// Edited: Daniel Reilly
+
 """
 
 import serial
@@ -242,3 +242,31 @@ class RFIDler(object):
         except:
             pass
         return True
+    
+    def toggleLED(self,ledId):
+        pn = int(ledId) 
+        if pn < 1:
+            ledpin = 1;
+        elif pn > 6:
+            ledpin = 6;
+        else:
+            ledpin = pn;
+        self.command("LED %d" % ledpin)
+    def ledOn(self,ledId):
+        pn = int(ledId) 
+        if pn < 1:
+            ledpin = 1;
+        elif pn > 6:
+            ledpin = 6;
+        else:
+            ledpin = pn;
+        self.command("LEDON %d" % ledpin)
+    def ledOff(self,ledId):
+        pn = int(ledId) 
+        if pn < 1:
+            ledpin = 1;
+        elif pn > 6:
+            ledpin = 6;
+        else:
+            ledpin = pn;
+        self.command("LEDOFF %d" % ledpin)
